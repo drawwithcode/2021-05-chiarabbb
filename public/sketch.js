@@ -103,7 +103,6 @@ function draw() {
   pop();
 }
 
-//  Draw the line and send message to the Server
 function mouseDragged() {
   stroke(strokeColor);
   strokeCap(ROUND);
