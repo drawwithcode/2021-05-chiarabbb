@@ -6,7 +6,7 @@ clientSocket.on("mouseBroadcast", newBroadcast);
 
 function preload() {
 
-  myImage1 = loadImage("assets/carta.jpeg");
+  myImage1 = loadImage("../assets/carta.jpeg");
 } 
 
 function newConnection() {
