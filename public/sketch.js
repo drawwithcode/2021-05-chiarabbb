@@ -118,15 +118,3 @@ function mouseDragged() {
   };
   clientSocket.emit("mouse", message);
 
-  //  Play the song when I'm drawing
-  if (!song.isPlaying()) {
-    console.log("PLAY");
-    song.loop();
-  }
-}
-
-//  Pause the song when I release the mouse
-function mouseReleased() {
-  console.log("PAUSE");
-  song.pause();
-}
