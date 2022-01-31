@@ -117,4 +117,4 @@ function mouseDragged() {
     hue: hue,
   };
   clientSocket.emit("mouse", message);
-
+ }
