@@ -1,29 +1,18 @@
-var express = require("express");
-var app = express();
+console.log("running the server!");
+//  Load express
+let express = require("express");
+let app = express();
+//  Defined port (for localhost)
+//  Port created by heroku or Locally
+const port = process.env.PORT || 8000;
 
-var server = app.listen(3000);
+//  Defined server and connection
+let server = app.listen(port);
+console.log("Server is running on https://localhost:" + port);
 
 app.use(express.static("public"));
 
-console.log("My socket server is running");
-
-var socket = require("socket.io");
-
-var io = socket(server);
-
-io.sockets.on("connection", newConnection);
-
-function newConnection(socket) {
-    console.log("new conncection:" + socket.id);
-
-
-    socket.on("mouse", mouseMsg);
-
-    function mouseMsg(data){
-        socket.broadcast.emit("mouse", data);
-        console.log(data);
-    }
-
-}
-
-
+//  Import socket
+let serverSocket = require("socket.io");
+//  Assign the variable that runs the express
+let io = se
